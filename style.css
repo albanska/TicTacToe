@@ -1,0 +1,179 @@
+/* Common styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin-top: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center everything horizontally */
+    min-height: 70vh;
+    background-size: cover;   
+}
+.wrapper {
+    display: flex;
+    text-align: center;
+    column-gap: 20px;
+}
+p#winner{
+    height: 50px;
+  width: 400%;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 50%; 
+    min-height: 50%;
+    z-index: -15; /* Send video to the background */
+}
+
+.Player1 {
+    width: 200px;
+    height: 400px;
+    background-color: rgb(180, 180, 184); /* Change to default background color for Player 1 */
+    border-radius: 20px;
+    position: relative; /* Add position relative to use pseudo-elements */
+}
+h1{
+    position: absolute;
+    background-color: red;
+    color: #ffffff;
+    font-size: 8em;
+    margin-left: 50px;
+    margin-top: 50%;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+.Player2 {
+    width: 200px;
+    height: 400px;
+    background-color: rgb(180, 180, 184); /* Change to default background color for Player 1 */
+    border-radius: 20px;
+    position: relative; /* Add position relative to use pseudo-elements */
+}
+.Player2 > h1{
+    background-color: blue;
+    border: 2px solid blue;
+}
+h3{
+    color: #ffffff;
+    margin-top: 20px;
+
+}
+p{
+    color: #ffffff;
+    
+}
+.board {
+    width: 600px;
+    height: 400px;
+    background-color: rgb(126, 156, 182);
+    border-radius: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 3px;
+    justify-content: center; 
+}
+
+.cell {
+    margin-top: 5px;
+    border: 3px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    cursor: pointer;
+    justify-content: center;
+}
+
+button {
+    height: 40px;
+}
+
+.refresh-button {
+    position: absolute;
+    top: 700px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Move back half of its own width */
+}
+
+.Nextgame {
+    display: flex;
+    position: absolute;
+    top: -50px;
+    background-color: #ffffff;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Move back half of its own width */
+}
+
+#datascore{
+   display: flex;
+   background-color: #ffffff;
+   align-items: center;
+   justify-content: center;
+   margin-top: 10px;
+   border-radius: 10px;
+}
+#datascore div{
+    background-color: #a7a7a7;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    width: 200px;
+}
+.darckBlue{
+    color: white;
+    text-align: center;
+    margin-top: 20%;
+}
+#fname{
+    text-align: center;
+    border-radius: 1px;
+}
+#fname2{
+    text-align: center;
+    border-radius: 1px;
+}
+.winning-cell {
+    background-color: yellow; /* Change to any color or add additional styling as needed */
+}
+
+  
+/* Border animation */
+.Player1::before,
+.Player2::before,
+.game::before,
+.datascore::before {
+    
+    content: '';
+    position: absolute;
+    top: -6px; /* Adjust position to align with the border of the player and create space */
+    left: -6px; /* Adjust position to align with the border of the player and create space */
+    width: calc(100% + 12px); /* Add extra width to account for border thickness */
+    height: calc(100% + 12px); /* Add extra height to account for border thickness */
+    border: 3px solid transparent;
+    border-radius: 20px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+    z-index: -1; /* Move the pseudo-elements behind other content */
+}
+
+.Player2:hover::before {
+    border-color: rgb(0, 67, 192); /* Change the border color on hover */
+}
+.Player1:hover::before {
+    border-color: rgb(255, 0, 0); /* Change the border color on hover */
+}
+.datascore:hover::before {
+    border-color: rgb(126, 156, 182); /* Change the border color on hover */
+}
+.game:hover::before {
+    border-color: rgb(231, 0, 0); /* Change the border color on hover */
+}

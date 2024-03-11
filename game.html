@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <script src="gamejs.js" defer></script>
+        <title> Game </title>
+    </head>
+    <body>
+        <video autoplay muted loop id="myVideo">
+            <source src="./image/pexels-rostislav-uzunov-7670836 (2160p).mp4" type="video/mp4">
+          </video>
+        <div id="wrapper">
+        <div class="wrapper">
+            <div class="Player1">
+                <h3>Joueur 1</h3>
+            <label for="fname"></label><br>
+                <input type="text" id="fname" name="fname" value="John">
+                <h1 id="X">X </H1>
+                </div>
+        <div class="board" id="game">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+            <div class="win">
+                <h2>Résultats</H2>
+                    <p id="winner"></p>
+            </div>
+          </div>
+            <div class="Player2">
+                <h3>Joueur 2</h3>
+                <label for="fname2"></label><br>
+                <input type="text" id="fname2" name="fname" value="Fredi">
+                <h1 id="O"> O </H1>
+            </div>
+        </div>
+    </body>
+    <footer2>
+        <div>
+            <div id="datascore">
+                <h2>Liste des scores</h2></br>
+                <div id="jeu1">Jeu 1</div>
+                <div id="jeu2">Jeu 2</div>
+                <div id="jeu3">Jeu 3</div>
+            </div>
+            <button class="refresh-button">Nouveau jeu!</button>
+        </div>
+    </footer2>
+<footer>
+    <footer class="darckBlue">
+        <small >
+            &copy; It's Me AM 2024
+        </small>
+    
+</footer>
+    
+</html>
